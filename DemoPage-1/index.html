@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>HTML Page with banner and footer</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container page-header">
+        <h1 class="page__title">Demo Page</h1>
+
+        <nav class="header__nav">
+          <ul class="nav__items">
+            <li class="nav__item"><a href="#">Home</a></li>
+            <li class="nav__item"><a href="#">About</a></li>
+            <li class="nav__item"><a href="#">Services</a></li>
+            <li class="nav__item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__menu">
+          <div class="hamburger-menu">
+            <img
+              src="Images/hamburger.svg"
+              alt="hamburger menu"
+              class="hamburger-menu__icon"
+            />
+          </div>
+          <div class="close-menu">
+            <img
+              src="Images/close.svg"
+              alt="close menu"
+              class="close-menu__icon"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="content__banner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="Images/pexels-anjana-c-169994-674010.jpg" alt="image" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Images/pexels-jovana-nesic-188639-593655.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Images/pexels-m-venter-792254-1659438.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/pexels-philippedonn-1133957.jpg" alt="image" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/pexels-pixabay-206359.jpg" alt="image" />
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div class="featured-blog">
+        <div class="container">
+          <h2>Featured Blog</h2>
+          <div class="featured-blog__wrapper">
+            <article class="blog-card">
+              <figure
+                style="
+                  background: url('Images/pexels-anjana-c-169994-674010.jpg')
+                    no-repeat center;
+                  background-size: cover;
+                "
+              >
+                <img
+                  src="Images/pexels-anjana-c-169994-674010.jpg"
+                  alt="image"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h3 class="blog-card__title">Overview of Peacock Feathers</h3>
+                <p class="blog-card__content entry-content">
+                  Peacock feathers, scientifically known as train feathers or
+                  coverts, are highly specialised structures found in the tails
+                  of male peafowls. Composed of a series of elongated feathers,
+                  they play a crucial role in courtship displays, attracting
+                  mates through their dazzling appearance. Let’s now delve into
+                  the different types of peacock feathers, each possessing
+                  distinctive features.
+                </p>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <figure
+                style="
+                  background: url('Images/pexels-jovana-nesic-188639-593655.jpg')
+                    no-repeat center;
+                  background-size: cover;
+                "
+              >
+                <img
+                  src="Images/pexels-jovana-nesic-188639-593655.jpg"
+                  alt="image"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h3 class="blog-card__title">Overview of Roses</h3>
+                <p class="blog-card__content entry-content">
+                  rose, (genus Rosa), genus of some 100 species of perennial
+                  shrubs in the rose family (Rosaceae). Roses are native
+                  primarily to the temperate regions of the Northern Hemisphere.
+                  Many roses are cultivated for their beautiful flowers, which
+                  range in colour from white through various tones of yellow and
+                  pink to dark crimson and maroon, and most have a delightful
+                  fragrance, which varies according to the variety and to
+                  climatic conditions
+                </p>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <figure
+                style="
+                  background: url('Images/pexels-m-venter-792254-1659438.jpg')
+                    no-repeat center;
+                  background-size: cover;
+                "
+              >
+                <img
+                  src="Images/pexels-m-venter-792254-1659438.jpg"
+                  alt="image"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h3 class="blog-card__title">Overview of Rock Climbing</h3>
+                <p class="blog-card__content entry-content">
+                  Rock climbing is a climbing sports discipline that involves
+                  ascending routes consisting of natural rock in an outdoor
+                  environment, or on artificial resin climbing walls in a mostly
+                  indoor environment.[1] Routes are chronicled in guidebooks,
+                  and on online databases, with the details of how to climb the
+                  route (called the beta).
+                </p>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <figure
+                style="
+                  background: url('Images/pexels-pixabay-206359.jpg') no-repeat
+                    center;
+                  background-size: cover;
+                "
+              >
+                <img src="Images/pexels-pixabay-206359.jpg" alt="image" />
+              </figure>
+              <div class="blog-card__body">
+                <h3 class="blog-card__title">Overview of Rock Climbing</h3>
+                <p class="blog-card__content entry-content">
+                  Rock climbing is a climbing sports discipline that involves
+                  ascending routes consisting of natural rock in an outdoor
+                  environment, or on artificial resin climbing walls in a mostly
+                  indoor environment.[1] Routes are chronicled in guidebooks,
+                  and on online databases, with the details of how to climb the
+                  route (called the beta),.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-grid">
+        <div class="container">
+          <h2>Our Team</h2>
+          <div class="team__wrapper">
+            <div class="team-card">
+              <a
+                href="Images/pexels-chloekalaartist-1043474.jpg"
+                data-fancybox="team"
+                data-caption="John Doe - Project Manager"
+              >
+                <img
+                  src="Images/pexels-chloekalaartist-1043474.jpg"
+                  alt="person"
+                />
+                <h3>John Doe</h3>
+              </a>
+            </div>
+
+            <div class="team-card">
+              <a
+                href="Images/pexels-danxavier-1121796.jpg"
+                data-fancybox="team"
+                data-caption="Dan Xavier - CEO"
+              >
+                <img src="Images/pexels-danxavier-1121796.jpg" alt="person" />
+                <h3>Dan Xavier</h3>
+              </a>
+            </div>
+
+            <div class="team-card">
+              <a
+                href="Images/pexels-olly-774095.jpg"
+                data-fancybox="team"
+                data-caption="KP Olly - Designer"
+              >
+                <img src="Images/pexels-olly-774095.jpg" alt="person" />
+                <h3>KP Olly</h3>
+              </a>
+            </div>
+
+            <div class="team-card">
+              <a
+                href="Images/pexels-tarzine-jackson-254126-773371.jpg"
+                data-fancybox="team"
+                data-caption="Tarzine Jackson - Developer"
+              >
+                <img
+                  src="Images/pexels-tarzine-jackson-254126-773371.jpg"
+                  alt="person"
+                />
+                <h3>Tarzine Jackson</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer__menu">
+            <div class="footer__nav">
+              <ul class="footer__nav-items">
+                <li class="footer__nav-item"><a href="#">Home</a></li>
+                <li class="footer__nav-item"><a href="#">About</a></li>
+                <li class="footer__nav-item"><a href="#">Services</a></li>
+                <li class="footer__nav-item"><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__social">
+            <ul class="social__items">
+              <li class="social__item">
+                <a href="#">
+                  <img src="Images/facebook.svg" alt="facebook" />
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#">
+                  <img src="Images/instagram.svg" alt="instagram" />
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#">
+                  <img src="Images/linkedin.svg" alt="linkedin" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-mid">
+          <button class="button" data-fancybox="" data-src="#newsletter__form">
+            Subscribe to our Newsletter
+          </button>
+          <div class="entry-content newsletter-description">
+            <p>
+              Get the latest news, offers, our travel brochure & travel guide
+              once or twice a month.
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Demo Page. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <section
+      id="newsletter__form"
+      class="newsletter__form"
+      style="display: none"
+    >
+      <div class="container">
+        <div class="newsletter-subscription__header">
+          <h2 class="newsletter-subscription__title">
+            Subscribe to our Newsletter
+          </h2>
+          <div class="entry-content">
+            <p>
+              Subscribe to our newsletter to get the latest updates on our
+              products and services.
+            </p>
+          </div>
+          <div class="newsletter-subscription__form">
+            <form action="#">
+              <div class="form_field">
+                <label for="Your Name">Your Name</label>
+                <div class="form__input-field">
+                  <input
+                    type="text"
+                    id="input__name"
+                    class="input__name"
+                    placeholder="Your Name*"
+                  />
+                </div>
+              </div>
+              <div class="form_field">
+                <label for="Your Email">Your Email</label>
+                <div class="form__input-field">
+                  <input
+                    type="text"
+                    id="input_email"
+                    placeholder="Your Email*"
+                    class="input__email"
+                  />
+                </div>
+              </div>
+
+              <div class="form__submit">
+                <button class="button" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js" defer></script>
+  </body>
+</html>
