@@ -1,0 +1,500 @@
+@use "mixins" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pricedown", sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@font-face {
+    font-family: "Pricedown";
+    src: url("../Fonts/Coolvetica/Coolvetica\ Rg.otf");
+}
+
+li {
+    list-style: none;
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: #f2ecdc;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header-container {
+    @include flexStyle($align: center, $direction: row);
+}
+
+.header__title {
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.navBar {
+    position: relative;
+    width: 80%;
+}
+
+.nav__items {
+    @include flexStyle($justify: space-evenly, $align: center, $direction: row);
+    @media screen and (max-width: 768px) {
+        // display: none;
+        position: absolute;
+        @include flexStyle(space-between, center, column);
+        z-index: 5;
+        padding: 4rem 0 1rem 0;
+        background-color: #0e3e24;
+        height: 100vh;
+        width: 200px;
+        top: -3.2rem;
+        right: 0;
+        transform: translate(1332px, 0);
+        transition: all 0.1s ease;
+    }
+}
+
+.showNavBar {
+    @media screen and (max-width: 768px) {
+        transform: translate(32px, 0);
+    }
+}
+
+.nav__item,
+.sub__item {
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        transform: scaleX(0);
+        border-bottom: 2px solid black;
+        transform-origin: bottom right;
+        transition: all 0.4s ease;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+}
+
+.item__title {
+    font-size: 28px;
+}
+
+.nav__submenu {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 250px;
+    background-color: #0e3e24;
+    left: 0;
+    top: 4rem;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    padding: 1rem;
+
+    .sub__item a {
+        color: white;
+    }
+}
+
+.showNav {
+    display: block;
+}
+
+.hamburger-menu__icons {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: -1rem;
+    right: 0;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}
+
+.hamburger__icon {
+    position: relative;
+    z-index: 2;
+}
+
+.close__icon {
+    display: none;
+    position: relative;
+    top: -3rem;
+    z-index: 6;
+}
+
+//banner
+
+.content-banner {
+    width: 100vw;
+    height: 84vh !important;
+    overflow: hidden;
+    position: relative;
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #f1356d;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 4;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: #333;
+    }
+}
+
+//our team
+
+.team-info {
+    background-color: #0e3e24;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 32px;
+}
+
+.fancy-team__box {
+    @include flexStyle(space-between, null, row);
+    gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+        @include flexStyle(center, center, column);
+    }
+}
+
+.team-card {
+    position: relative;
+    width: 25%;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+
+    img {
+        scale: 1;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.card__info {
+    position: absolute;
+    // top: 0;
+    z-index: 3;
+    bottom: 1rem;
+    color: white;
+    text-align: center;
+    width: 100%;
+    opacity: 0.8;
+}
+
+//cta
+
+.cta-block {
+    background: url("../uploads/bgImg.jpg") no-repeat center center/cover;
+}
+
+.cta-container {
+    @include flexStyle(center, center, row);
+    color: black;
+    text-align: center;
+    padding: 2rem 0;
+
+    @media screen and (max-width: 768px) {
+        @include flexStyle(center, center, column);
+    }
+}
+
+.entry-content {
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+}
+
+.cta__description {
+    width: 50%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
+    }
+}
+
+.buttons {
+    cursor: pointer;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: #f1356d;
+    margin: 2rem 0 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #0e3e24;
+        color: #0e3e24 !important;
+    }
+}
+
+.btn {
+    @include flexStyle(center, center, row);
+    color: white;
+
+    svg {
+        margin-left: 0.5rem;
+    }
+
+    &:hover {
+        color: #f1356d;
+    }
+}
+
+//footer
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.page-footer {
+    background-color: #0e3e24;
+    color: #f2ecdc;
+}
+
+.footer-cols {
+    @include flexStyle(space-evenly, stretch, row);
+    padding: 2rem 0;
+
+    @media screen and (max-width: 768px) {
+        @include flexStyle(center, center, column);
+    }
+}
+
+.footer-col {
+    min-height: 200px;
+    padding-right: 1rem;
+    &:not(:last-of-type) {
+        border-right: 2px solid #f2ecdc;
+    }
+
+    @media screen and (max-width: 768px) {
+        @include flexStyle(center, center, column);
+        padding: 1rem 0;
+        border-right: 2px solid transparent !important;
+        width: 100%;
+        &:not(:last-of-type) {
+            border-bottom: 2px solid #f2ecdc;
+        }
+    }
+
+    li {
+        list-style-type: disc;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: #f1356d;
+        }
+
+        a {
+            width: 100%;
+            color: #f2ecdc;
+
+            &:hover {
+                color: #f1356d;
+            }
+        }
+    }
+}
+
+//newsletter form
+
+.newsletter__popUp {
+    background-color: #6aa3b3 !important;
+    padding: 2rem 0;
+}
+
+.newsletter-subscription__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    padding: 0 0 0.5rem;
+}
+
+.newsletter-subscription__form label {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal;
+}
+
+.input__name,
+.input__email {
+    width: 100%;
+    height: 40px;
+    padding: 0.5rem;
+    background-color: #f2ecdc;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid #333;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.submitBtn {
+    width: 100%;
+    font-size: 18px;
+}
+
+//teambox PopUp
+
+.team__popUp {
+    height: 900px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    h2 {
+        color: black;
+    }
+
+    .social__links {
+        @include flexStyle($justify: center, $align: center, $direction: row);
+        gap: 1rem;
+        padding: 2rem 0;
+        transition: all 0.3s ease;
+
+        & a:hover {
+            color: #f1356d;
+        }
+    }
+}
+
+//featured articles
+.featured-articles {
+    padding: 2rem 0;
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #333;
+        padding: 0 0 1rem;
+    }
+}
+
+.articles__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+
+    @media screen and (min-width: 700px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.article-card {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    scale: 1;
+    transition: all 0.3s ease;
+
+    figure {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &:hover {
+        scale: 1.01;
+    }
+}
+
+.article__description {
+    padding: 1rem;
+
+    p {
+        font-size: 1rem;
+        color: #333;
+        padding: 0.5rem 0;
+    }
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}

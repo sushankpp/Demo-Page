@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Landing Page with HTML Semantics</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <div class="header__title">
+          <h1>Demo Page</h1>
+        </div>
+        <nav class="navBar">
+          <ul class="nav__items">
+            <li class="nav__item"><a href="" class="item__title">Home</a></li>
+
+            <li class="nav__item">
+              <a href="" class="item__title">About</a>
+
+              <ul class="nav__submenu">
+                <li class="sub__item"><a href="">Section Tag</a></li>
+                <li class="sub__item"><a href="">Article Tag</a></li>
+                <li class="sub__item"><a href="">Aside Tag</a></li>
+                <li class="sub__item"><a href="">Footer Tag</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <a href="" class="item__title">Others</a>
+              <ul class="nav__submenu">
+                <li class="sub__item"><a href="">Header Tags</a></li>
+                <li class="sub__item"><a href="">Semantic Tags</a></li>
+                <li class="sub__item"><a href="">Tags by Category</a></li>
+                <li class="sub__item"><a href="">Tags by Alphabet</a></li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a href="" class="item__title">Contact </a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="item__title">Semantics </a>
+            </li>
+          </ul>
+
+          <div class="hamburger-menu__icons">
+            <div class="hamburger__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                >
+                  <path d="M20 7H4" />
+                  <path d="M20 12H4" opacity="0.5" />
+                  <path d="M20 17H4" />
+                </g>
+              </svg>
+            </div>
+            <div class="close__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"
+                />
+              </svg>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="content-banner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/uploads/pictures.webp" alt="Random Picture" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/uploads/picture2.jpg" alt="Random Picture" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/uploads/picture3.webp" alt="Random Picture" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/uploads/picture4.jpg" alt="Random Picture" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/uploads/picture5.webp" alt="Random Picture" />
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div class="team-info">
+        <div class="container">
+          <h2 class="team__title">Our Team</h2>
+          <div class="fancy-team__box">
+            <div class="team-card">
+              <a
+                href="#team1"
+                data-fancybox="team"
+                data-caption="John Abraham- Team Lead"
+              >
+                <img src="assets/uploads/team1.jpg" alt="John Abraham" />
+                <div class="card__info">
+                  <h3>John Abraham</h3>
+                  <p>Team Lead</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="team-card">
+              <a
+                href="#team2"
+                data-fancybox="team"
+                data-caption="John Doe - Designer"
+              >
+                <img src="assets/uploads/team2.jpg" alt="John Doe" />
+                <div class="card__info">
+                  <h3>John Doe</h3>
+                  <p>Designer</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="team-card">
+              <a
+                href="#team3"
+                data-fancybox="team"
+                data-caption="Murnal Kulkarni - Developer"
+              >
+                <img src="assets/uploads/team3.jpg" alt="Murnal Kulkarni" />
+                <div class="card__info">
+                  <h3>Murnal Kulkarni</h3>
+                  <p>Developer</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="team-card">
+              <a
+                href="#team4"
+                data-fancybox="team"
+                data-caption="Bin Haden - Tester"
+              >
+                <img src="assets/uploads/team4.jpg" alt="Bin Haden" />
+                <div class="card__info">
+                  <h3>Bin Haden</h3>
+                  <p>Tester</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="cta-block">
+        <div class="container">
+          <div class="cta-container">
+            <header class="cta__header">
+              <h2 class="cta__title">Subscribe to Our Newsletter</h2>
+              <div class="entry-content cta__description">
+                <p>
+                  Subscribe to our newsletter to get the latest updates on our
+                  products and services.
+                </p>
+              </div>
+            </header>
+            <div class="cta__body">
+              <div class="cta__content">
+                <div class="cta__description entry-content">
+                  <p>
+                    Subscribing to our newsletter will allow you to get
+                    notifications about our product earlier than others. Join in
+                    now
+                  </p>
+                  <div class="subscribe__btn buttons">
+                    <a
+                      href="#newsletterForm"
+                      class="btn"
+                      data-src="#newsletterForm"
+                      data-fancybox=""
+                      >Subscribe
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 2048 2048"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M1920 1276q1 2 1 29t1 69t0 97t0 111t-1 114t0 102t-1 79t0 43H0v-121q0-47-1-103t0-113t-1-112t0-96t0-70t2-29L383 128h385v128H475L134 1280h418l128 256h560l128-256h418L1445 256h-293V128h385zm-128 132h-344l-128 256H600l-128-256H128v384h1664zM896 933V0h128v933l294-293l90 90l-448 448l-448-448l90-90z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-articles">
+        <div class="container">
+          <h2>Featured Blogs</h2>
+
+          <div class="articles__wrapper">
+            <article class="article-card">
+              <figure
+                style="
+                  background: url('assets/uploads/pictures.webp') no-repeat
+                    center;
+                  background-size: cover;
+                "
+              >
+                <img
+                  src="./assets/uploads/pictures.webp"
+                  alt="Random Picture"
+                />
+              </figure>
+              <div class="article__description">
+                <h3>Nature</h3>
+                <p class="entry-content">
+                  Nature is an inherent character or constitution, particularly
+                  of the ecosphere or the universe as a whole. In this general
+                  sense nature refers to the laws, elements and phenomena of the
+                  physical world, including life. Although humans are part of
+                  nature, human activity or humans as a whole are often
+                  described as at times at odds, or outright separate and even
+                  superior to nature.
+                </p>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <figure
+                style="
+                  background: url('assets/uploads/picture2.jpg') no-repeat
+                    center;
+                  background-size: cover;
+                "
+              >
+                <img src="./assets/uploads/picture2.jpg" alt="Random Picture" />
+              </figure>
+              <div class="article__description">
+                <h3>Jungle</h3>
+                <p class="entry-content">
+                  The word jungle originates from the Sanskrit word jaṅgala
+                  (जङ्गल), meaning rough and arid. It came into the English
+                  language in the 18th century via the Hindustani word for
+                  forest (Hindi/Urdu: जङ्गल/جنگل) (Jangal). Jāṅgala has also
+                  been variously transcribed in English as jangal, jangla,
+                  jungal, and juṅgala.[citation needed] It has been suggested
+                  that an Anglo-Indian interpretation led to its connotation as
+                  a dense "tangled thicket".
+                </p>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <figure
+                style="
+                  background: url('assets/uploads/picture3.webp') no-repeat
+                    center;
+                  background-size: cover;
+                "
+              >
+                <img
+                  src="./assets/uploads/picture3.webp"
+                  alt="Random Picture"
+                />
+              </figure>
+              <div class="article__description">
+                <h3>Paris</h3>
+                <p class="entry-content">
+                  Paris (French pronunciation: [paʁi] is the capital and largest
+                  city of France. With an estimated population of 2,048,472
+                  residents in January 2025[3] in an area of more than 105 km2
+                  (41 sq mi), Paris is the fourth-most populous city in the
+                  European Union, the ninth-most populous city in Europe and the
+                  30th most densely populated city in the world in 2022. Since
+                  the 17th century, Paris has been one of the world's major
+                  centres of finance.
+                </p>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <figure
+                style="
+                  background: url('assets/uploads/picture4.jpg') no-repeat
+                    center;
+                  background-size: cover;
+                "
+              >
+                <img src="./assets/uploads/picture4.jpg" alt="Random Picture" />
+              </figure>
+              <div class="article__description">
+                <h3>Eiffel Tower</h3>
+                <p class="entry-content">
+                  The Eiffel Tower (/ˈaɪfəl/ ⓘ EYE-fəl; French: Tour Eiffel [tuʁ
+                  ɛfɛl] ⓘ) is a wrought-iron lattice tower on the Champ de Mars
+                  in Paris, France. It is named after the engineer Gustave
+                  Eiffel, whose company designed and built the tower from 1887
+                  to 1889. Locally nicknamed "La dame de fer" (French for "Iron
+                  Lady"), it was constructed as the centerpiece of the 1889
+                  World's Fair, and to crown the centennial anniversary of the
+                  French Revolution..
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h3>About</h3>
+            <ul>
+              <li><a href="">Section Tag</a></li>
+              <li><a href="">Article Tag</a></li>
+              <li><a href="">Aside Tag</a></li>
+              <li><a href="">Footer Tag</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="">Heading Tags</a></li>
+              <li><a href="">Semantic Tags</a></li>
+              <li><a href="">Tags By Category</a></li>
+              <li><a href="">Tags By Alphabet</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact Infos</h3>
+            <ul class="contact__info">
+              <li><a href="tel:_977983223232">983223232</a></li>
+              <li><a href="mailto:sushankpandey233@gmail.com">Send Mail</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Social Links</h3>
+            <ul class="social__links">
+              <li><a href="" target="_blank">Twitter</a></li>
+              <li><a href="" target="_blank">LinkedIn</a></li>
+              <li><a href="" target="_blank">Facebook</a></li>
+              <li><a href="" target="_blank">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="team-card__popUp" style="display: none">
+      <div id="team1" class="team__popUp">
+        <img src="assets/uploads/team1.jpg" alt="John Abraham" />
+        <h2>John Ambraham</h2>
+        <p>Team Lead</p>
+        <p>
+          John Abraham is a creative designer with over 5 years of experience as
+          Team Leader.
+        </p>
+        <div class="social__links">
+          <a href="" target="_blank">Twitter</a>
+          <a href="" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+
+      <div id="team2" class="team__popUp">
+        <img src="assets/uploads/team2.jpg" alt="John Doe" />
+        <h2>John Doe</h2>
+        <p>Designer</p>
+        <p>
+          John Doe is a creative designer with over 5 years of experience in
+          UI/UX design.
+        </p>
+        <div class="social__links">
+          <a href="" target="_blank">Twitter</a>
+          <a href="" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+
+      <div id="team3" class="team__popUp">
+        <img src="assets/uploads/team3.jpg" alt="Mrunal Kulkarni" />
+        <h2>Mrunal Kulkarni</h2>
+        <p>Developer</p>
+        <p>
+          Murnal Kulkarni is a creative designer with over 5 years of experience
+          as a full stack developer.
+        </p>
+        <div class="social__links">
+          <a href="" target="_blank">Twitter</a>
+          <a href="" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+
+      <div id="team4" class="team__popUp">
+        <img src="assets/uploads/team4.jpg" alt="Bin Haden" />
+        <h2>Bin Haden</h2>
+        <p>Tester</p>
+        <p>
+          Bin Haden is a creative designer with over 5 years of experience as
+          tester.
+        </p>
+        <div class="social__links">
+          <a href="" target="_blank">Twitter</a>
+          <a href="" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="newsletter__popUp" id="newsletterForm" style="display: none">
+      <div class="container">
+        <div class="newsletter-subscription__header">
+          <h2 class="newsletter-subscription__title">
+            Subscribe to our Newsletter
+          </h2>
+          <div class="entry-content">
+            <p>
+              Subscribe to our newsletter to get the latest updates on our
+              products and services.
+            </p>
+          </div>
+          <div class="newsletter-subscription__form">
+            <form action="#">
+              <div class="form_field">
+                <label for="Your Name">Your Name</label>
+                <div class="form__input-field">
+                  <input
+                    type="text"
+                    id="input__name"
+                    class="input__name"
+                    placeholder="Your Name*"
+                  />
+                </div>
+              </div>
+              <div class="form_field">
+                <label for="Your Email">Your Email</label>
+                <div class="form__input-field">
+                  <input
+                    type="text"
+                    id="input_email"
+                    placeholder="Your Email*"
+                    class="input__email"
+                  />
+                </div>
+              </div>
+
+              <div class="form__submit">
+                <button class="buttons btn submitBtn" type="submit">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/index.js" defer></script>
+  </body>
+</html>
