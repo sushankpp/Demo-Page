@@ -6,23 +6,35 @@
 }
 
 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 @font-face {
   font-family: "Pricedown";
-  src: url("../Fonts/Coolvetica/Coolvetica Rg.otf");
+  src: url("../fonts/Coolvetica/Coolvetica Rg.otf") format(opentype);
+}
+@font-face {
+  font-family: "designer";
+  src: url("../fonts/designer/DESIGNER.otf") format("opentype");
 }
 li {
   list-style: none;
   padding: 10px 20px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: designer;
+}
+
 a {
   text-decoration: none;
-  color: black;
   font-size: 18px;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -88,6 +100,10 @@ body {
   .showNavBar {
     transform: translate(32px, 0);
   }
+}
+
+.nav__item a {
+  color: black;
 }
 
 .nav__item,
@@ -172,6 +188,12 @@ body {
   height: 100%;
 }
 
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: #f1356d;
@@ -223,6 +245,8 @@ h2 {
   scale: 1;
   overflow: hidden;
   transition: all 0.3s ease;
+  height: 100%;
+  object-fit: cover;
 }
 .team-card img:hover {
   scale: 1.1;
@@ -419,7 +443,9 @@ h3 {
 }
 
 .team__popUp {
-  height: 900px;
+  cursor: pointer !important;
+  flex-direction: row !important;
+  height: 100vh;
 }
 .team__popUp img {
   width: 100%;
@@ -438,8 +464,15 @@ h3 {
   padding: 2rem 0;
   transition: all 0.3s ease;
 }
+.team__popUp .social__links a {
+  color: black;
+}
 .team__popUp .social__links a:hover {
   color: #f1356d;
+}
+
+.team__desc {
+  margin: auto 0 auto 2rem;
 }
 
 .featured-articles {
