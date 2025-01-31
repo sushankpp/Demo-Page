@@ -27,16 +27,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav__item')) {
+    if (!e.target.closest('.nav__item') && !e.target.closest('.nav__items')) {
       closeAllNavs();
     }
   });
+  
+
+  // document.addEventListener('mouseover', (e)=>{
+  //   if (!e.target.closest('.nav__item')) {
+  //     closeAllNavs();
+  //   }
+  // })
 
   const navItems = document.querySelector('.nav__items');
   const menuBtn = document.querySelector('.hamburger__icon');
   const closeBtn = document.querySelector('.close__icon');
 
-  menuBtn.addEventListener('click', () => {
+  menuBtn.addEventListener('click', (e) => {
+
     navItems.classList.add('showNavBar');
     closeBtn.style.display = 'block';
   });

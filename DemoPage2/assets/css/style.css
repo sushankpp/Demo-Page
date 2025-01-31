@@ -257,6 +257,17 @@ h2 {
   }
 }
 
+.screenlink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  font-size: 0;
+  cursor: pointer;
+}
+
 .card__info {
   position: absolute;
   z-index: 3;
@@ -445,7 +456,7 @@ h3 {
 .team__popUp {
   cursor: pointer !important;
   flex-direction: row !important;
-  height: 100vh;
+  height: 75vh;
 }
 .team__popUp img {
   width: 100%;
