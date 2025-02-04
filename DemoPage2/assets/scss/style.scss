@@ -15,7 +15,7 @@ img {
 
 @font-face {
     font-family: "Pricedown";
-    src: url("../fonts/Coolvetica/Coolvetica\ Rg.otf") format(opentype);
+    src: url("../fonts/Coolvetica/Coolvetica\ Rg.otf") format("opentype");
 }
 
 @font-face {
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: designer;
+    font-family: "designer", sans-serifF;
 }
 
 a {
@@ -96,12 +96,12 @@ body {
     }
 }
 
-.nav__item a{
-    color:black;
+.nav__items li a {
+    color: black;
 }
 
-.nav__item,
-.sub__item {
+.nav__items li,
+.nav__submenu li {
     cursor: pointer;
     position: relative;
 
@@ -138,7 +138,7 @@ body {
     border-radius: 10px;
     padding: 1rem;
 
-    .sub__item a {
+    li a {
         color: white;
     }
 }
@@ -221,6 +221,7 @@ h2 {
 }
 
 .fancy-team__box {
+    position: relative;
     @include flexStyle(space-between, null, row);
     gap: 1rem;
 
@@ -235,6 +236,7 @@ h2 {
     border: 1px solid black;
     border-radius: 15px;
     overflow: hidden;
+    transition: all 0.3s ease;
 
     img {
         scale: 1;
@@ -242,10 +244,12 @@ h2 {
         transition: all 0.3s ease;
         height: 100%;
         object-fit: cover;
+    }
 
-        &:hover {
-            scale: 1.1;
-        }
+    &:hover {
+        box-shadow:
+            0 20px 20px rgba(0, 0, 0, 0.5),
+            inset 0 20px 20px rgba(0, 0, 0, 0.5);
     }
 
     @media screen and (max-width: 768px) {
@@ -253,17 +257,16 @@ h2 {
     }
 }
 
-.screenlink{
+.screenlink {
     position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-  font-size: 0;
-  cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 0;
+    cursor: pointer;
 }
-
 
 .card__info {
     position: absolute;
@@ -279,7 +282,7 @@ h2 {
 //cta
 
 .cta-block {
-    background: url("../uploads/bgImg.jpg") no-repeat center center/cover;
+    background: url("../images/bgImg.jpg") no-repeat center center/cover;
 }
 
 .cta-container {
@@ -294,7 +297,6 @@ h2 {
 }
 
 .entry-content {
-    color: white;
     font-size: 18px;
     line-height: 1.5;
     padding-bottom: 1rem;
@@ -303,6 +305,7 @@ h2 {
 .cta__description {
     width: 50%;
     margin: 0 auto;
+    color: white;
 
     @media screen and (max-width: 768px) {
         width: 80%;
@@ -420,8 +423,7 @@ h3 {
     word-wrap: normal;
 }
 
-.input__name,
-.input__email {
+.form-field__input input {
     width: 100%;
     height: 40px;
     padding: 0.5rem;
@@ -445,7 +447,7 @@ h3 {
 //teambox PopUp
 
 .team__popUp {
-    cursor:  pointer !important;
+    cursor: pointer !important;
     flex-direction: row !important;
     height: 75vh;
 
@@ -465,8 +467,7 @@ h3 {
         padding: 2rem 0;
         transition: all 0.3s ease;
 
-        a{
-
+        a {
             color: black;
         }
 
@@ -547,4 +548,132 @@ h3 {
 h3 {
     font-size: 1.25rem;
     font-weight: 700;
+}
+
+//accordion
+.accordion-block {
+    background-color: #0f2e36;
+}
+
+.accordion__items {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.accordion__item {
+    cursor: pointer;
+    border-bottom: 1px solid #f2ecdc;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+    h3 {
+        @include flexStyle($justify: null, $align: center, $direction: row);
+        gap: 1rem;
+        color: #f2ecdc;
+    }
+}
+
+.accordion__content {
+    max-height: 0px;
+    padding-bottom: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #f2ecdc;
+}
+
+.active {
+    max-height: 100px;
+}
+
+.accordion-btn {
+    border: none;
+    background-color: transparent;
+    color: #f2ecdc;
+    transform: rotate(0);
+    transition: all 0.3s ease;
+}
+
+.clicked {
+    transform: rotate(45deg);
+}
+
+//media-text
+
+.media-text__block {
+    background: radial-gradient(black 3px, transparent 4px), radial-gradient(black 3px, transparent 4px),
+        linear-gradient(#fff 4px, transparent 0),
+        linear-gradient(
+            45deg,
+            transparent 74px,
+            transparent 75px,
+            #a4a4a4 75px,
+            #a4a4a4 76px,
+            transparent 77px,
+            transparent 109px
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 75px,
+            transparent 76px,
+            #a4a4a4 76px,
+            #a4a4a4 77px,
+            transparent 78px,
+            transparent 109px
+        ),
+        #fff;
+    background-size:
+        109px 109px,
+        109px 109px,
+        100% 6px,
+        109px 109px,
+        109px 109px;
+    background-position:
+        54px 55px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px;
+}
+
+.media-text__title {
+    color: #0e3e24;
+}
+
+.media-text__item {
+    cursor: pointer;
+    @include flexStyle($justify: space-between, $align: center, $direction: row);
+    padding: 1rem;
+    max-width: 860px;
+    margin: 0 auto 2rem;
+    background-color: #0f2e36;
+    color: white;
+    border-radius: 15px;
+    gap: 2rem;
+    transition: all 0.3s ease;
+
+    figure {
+        width: 350px;
+        height: 200px;
+        flex-shrink: 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width: 768px) {
+        @include flexStyle($justify: center, $align: center, $direction: column);
+        gap: 1rem;
+    }
+
+    &:hover {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.media-text__description {
+    text-align: justify;
 }

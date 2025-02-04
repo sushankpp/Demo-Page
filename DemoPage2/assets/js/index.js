@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  const navItem = document.querySelectorAll('.nav__item');
+  const navItem = document.querySelectorAll('.nav__items li');
 
   navItem.forEach((item) => {
     item.addEventListener('mouseenter', () => {
@@ -21,17 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     item.addEventListener('click', (e) => {
-      e.stopPropagation(); 
+      e.stopPropagation();
       showNav(item);
     });
   });
 
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav__item') && !e.target.closest('.nav__items')) {
+    if (!e.target.closest(navItem) && !e.target.closest('.nav__items')) {
       closeAllNavs();
     }
   });
-  
 
   // document.addEventListener('mouseover', (e)=>{
   //   if (!e.target.closest('.nav__item')) {
@@ -44,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.close__icon');
 
   menuBtn.addEventListener('click', (e) => {
-
     navItems.classList.add('showNavBar');
     closeBtn.style.display = 'block';
   });
@@ -55,10 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function showNav(item) {
-    closeAllNavs(); 
+    closeAllNavs();
     const subMenu = item.querySelector('.nav__submenu');
     if (subMenu) {
-      subMenu.classList.add('showNav'); 
+      subMenu.classList.add('showNav');
     }
   }
 
@@ -70,4 +68,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  const accordionItem = document.querySelectorAll('.accordion__item');
+
+  accordionItem.forEach((item) => {
+    item.addEventListener('click', () => {
+      this.accordionContent = item.querySelector('.accordion__content');
+      this.accordionBtn = item.querySelector('.accordion-btn');
+      if (accordionContent.classList.contains('active')) {
+        accordionContent.classList.remove('active');
+        accordionBtn.classList.remove('clicked');
+      } else {
+        accordionContent.classList.add('active');
+        accordionBtn.classList.add('clicked');
+      }
+    });
+  });
 });
