@@ -553,10 +553,12 @@ h3 {
 
 .accordion-block {
   background-color: #0f2e36;
+  background-image: radial-gradient(red 1.2px, #0f2e36 2px);
+  background-size: 48px 48px;
 }
 
 .accordion__items {
-  max-width: 860px;
+  max-width: 1020px;
   margin: 0 auto;
 }
 
@@ -616,7 +618,7 @@ h3 {
   align-items: center;
   flex-direction: row;
   padding: 1rem;
-  max-width: 860px;
+  max-width: 1020px;
   margin: 0 auto 2rem;
   background-color: #0f2e36;
   color: white;
