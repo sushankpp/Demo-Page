@@ -1,0 +1,117 @@
+@use "variables" as *;
+
+.fancy-info {
+    background:
+        linear-gradient(to bottom, rgba($white, 0), rgba($white, 0.97) 46%, rgba($white, 1) 100%),
+        url("../images/bgImg.png") no-repeat center center/cover;
+    padding: 5.375rem 5.375rem 2rem;
+
+    @media screen and (max-width: 1020px) {
+        padding: 3rem 2rem;
+    }
+}
+
+.fancy-info__header {
+    max-width: 870px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+
+    @media screen and (max-width: 1020px) {
+        width: 100%;
+    }
+}
+
+.fancy-info__title {
+    font-family: $fontFamily;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.21;
+    color: $secondaryColor;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.fancy-info__subtitle {
+    font-family: $fontFamily;
+    color: $text;
+    font-weight: 900;
+    font-size: 2.875rem;
+    line-height: 1.2;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 1020px) {
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+}
+
+.fancy-info__text {
+    line-height: 1.6;
+    font-weight: 500;
+    color: $secondaryColor;
+}
+
+.fancy-info__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1020px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.fancy-info__grid-item {
+    border-radius: 25px;
+    border: 1px solid rgba($border, 0.1);
+    background: linear-gradient(rgba(#797c98, 0.05), rgba($white, 1));
+    padding: 2.5rem 1.8rem;
+    margin-bottom: 2.3rem;
+    text-align: center;
+}
+
+.fancy-info__icon {
+    width: 60px;
+    height: 50px;
+    margin-bottom: 2.625rem;
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: $primaryColor;
+    }
+
+    @media screen and (max-width: 1020px) {
+        margin: 0 auto 1.3rem auto;
+    }
+}
+
+.fancy-info__grid-title {
+    font-size: 1.625rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: $text;
+    margin-bottom: 1rem;
+}
+
+.grid-item__content {
+    font-size: 0.93rem;
+    color: rgba($text, 0.75);
+}
+
+.fancy-info__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.more-info__btn {
+    color: $primaryColor;
+    &:hover {
+        background-color: $primaryColor;
+        color: $white;
+    }
+}

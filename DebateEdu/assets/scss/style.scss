@@ -1,0 +1,60 @@
+@use "variables" as *;
+@use "banner";
+@use "fancy-info";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontFamily;
+}
+
+.container {
+    max-width: 1260px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1020px) {
+        padding: 0 10px;
+    }
+}
+
+.container--xl {
+    max-width: 1440px;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+    outline-width: 2px;
+    outline-offset: 2px;
+}
+
+.entry-content {
+    font-family: $fontFamily;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.6;
+
+    @media screen and (max-width: 1020px) {
+        font-size: 1rem;
+    }
+}
+
+.btn {
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    padding: 1rem 2.625rem;
+    border: 2px solid $primaryColor;
+    font-weight: 500;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+}
