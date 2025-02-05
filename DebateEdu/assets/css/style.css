@@ -242,7 +242,7 @@
 }
 
 .grid-item__content {
-  font-size: 0.93rem;
+  font-size: 0.93rem !important;
   color: rgba(23, 41, 62, 0.75);
 }
 
