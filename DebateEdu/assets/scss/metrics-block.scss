@@ -1,0 +1,57 @@
+@use "variables" as *;
+
+.metrics-block {
+    padding: 5rem 2rem;
+}
+
+.metrics-block__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.3rem;
+
+    @media screen and (max-width: 1020px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 620px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.metrics-block__title {
+    font-size: 2.875rem;
+    letter-spacing: -2px;
+    line-height: 1.2;
+    color: $text;
+    margin-bottom: 2.3rem;
+
+    @media screen and (max-width: 1020px) {
+        font-size: 2rem;
+        text-align: center;
+        letter-spacing: 0;
+    }
+}
+
+.metrics-block__grid-item {
+    background: linear-gradient(to bottom, rgba(#797c98, 0.05) 100%, rgba($white, 1));
+    padding: 25px 30px;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid rgba($border, 0.1);
+}
+
+.metrics-block__grid-title {
+    font-size: 4.75rem;
+    letter-spacing: -2px;
+    line-height: 1.2;
+    color: $primaryColor;
+
+    @media screen and (max-width: 1020px) {
+        font-size: 2.875rem;
+        letter-spacing: 0;
+    }
+}
+
+.grid-text {
+    color: rgba($text, 0.75);
+}

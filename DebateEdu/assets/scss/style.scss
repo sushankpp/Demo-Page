@@ -1,6 +1,8 @@
 @use "variables" as *;
 @use "banner";
 @use "fancy-info";
+@use "metrics-block";
+@use "progression-path";
 
 * {
     margin: 0;
@@ -54,7 +56,19 @@ a {
     cursor: pointer;
     padding: 1rem 2.625rem;
     border: 2px solid $primaryColor;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.125rem;
     transition: all 0.3s ease;
 }
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+
+
